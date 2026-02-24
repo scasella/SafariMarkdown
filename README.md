@@ -2,6 +2,8 @@
 
 Convert the current Safari tab to clean Markdown with one click, powered by Codex.
 
+![SafariMarkdown screenshot](screenshot.png)
+
 ## Why it exists
 
 You're reading an article, docs page, or blog post in Safari and want it as clean Markdown — for notes, LLM context, or documentation. Instead of copy-pasting messy HTML or using a browser extension, SafariMarkdown reads the page content via AppleScript, sends it to a local Codex app server, and streams back well-structured Markdown in real-time.
