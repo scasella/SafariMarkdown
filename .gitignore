@@ -1,0 +1,7 @@
+# Compiled binaries
+SafariMarkdown
+*.app/
+.DS_Store
+*.o
+*.swp
+*~
