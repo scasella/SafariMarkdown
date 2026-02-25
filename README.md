@@ -16,34 +16,18 @@ You're reading an article, docs page, or blog post in Safari and want it as clea
 
 ## Install
 
+### Homebrew (recommended)
+
 ```bash
+brew install --cask scasella/tap/safarimarkdown
+```
+
+### Build from source
+
+```bash
+git clone https://github.com/scasella/SafariMarkdown.git
 cd SafariMarkdown
-
-# Compile
-swiftc -parse-as-library -o SafariMarkdown SafariMarkdown.swift
-
-# Build .app bundle (hides dock icon)
-mkdir -p SafariMarkdown.app/Contents/MacOS
-cp SafariMarkdown SafariMarkdown.app/Contents/MacOS/
-
-cat > SafariMarkdown.app/Contents/Info.plist << 'EOF'
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>CFBundleExecutable</key>
-    <string>SafariMarkdown</string>
-    <key>CFBundleIdentifier</key>
-    <string>com.dailywidgets.safarimarkdown</string>
-    <key>LSUIElement</key>
-    <true/>
-    <key>NSAppleEventsUsageDescription</key>
-    <string>SafariMarkdown needs access to Safari to read the current page content.</string>
-</dict>
-</plist>
-EOF
-
-# Launch
+bash build.sh
 open SafariMarkdown.app
 ```
 
